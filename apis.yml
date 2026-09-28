@@ -1,23 +1,86 @@
 aid: binsentry
+
 name: Binsentry
-description: 'Binsentry is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.binsentry.com/media/fxthmrkh/og-logo.png
+
+description: BinSentry provides AI‑driven feed management solutions for animal feed and grain operations. Using computer‑vision sensors, it creates
+  3‑D images of bin contents, delivering real‑time inventory data, alerts, and analytics via a cloud dashboard. The platform helps producers,
+  integrators, and feed mills reduce waste, improve safety, and optimize logistics across thousands of bins worldwide.
+
 url: https://raw.githubusercontent.com/api-evangelist/binsentry/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+- AI
+- FeedManagement
+- Agriculture
+- IoT
+- Inventory
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/binsentry-hosts.yml
+- type: SDKs
+  url: packages/binsentry-packages.yml
+- type: Packages
+  url: packages/binsentry-packages.yml
+- type: Newsroom
+  url: https://www.binsentry.com/resources/media
+- type: Leadership
+  url: https://www.binsentry.com/company/leadership/
+- type: GitHubOrganization
+  url: https://github.com/BinSentry
+- type: DomainSecurity
+  url: security/binsentry-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/binsentry
+  url: https://www.binsentry.com
+- type: Documentation
+  url: https://www.binsentry.com/resources
+- type: Blog
+  url: https://www.binsentry.com/resources/blog
+- type: Support
+  url: https://www.binsentry.com/contact-us
+- type: SignUp
+  url: https://www.binsentry.com/request-a-demo
+
+apis:
+- name: Binsentry API
+  description: API for BinSentry platform providing feed inventory data and alerts.
+  humanURL: https://docs.api.binsentry.com/
+  baseURL: null
+  aid: binsentry:binsentry-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Docs at https://docs.api.binsentry.com render via JavaScript, preventing machine‑readable spec discovery.
+  evidence:
+  - url: https://docs.api.binsentry.com/
+    status: 200
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

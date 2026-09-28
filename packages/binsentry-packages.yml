@@ -1,0 +1,40 @@
+generated: '2026-09-28'
+method: probed
+generator: harvest-packages.py
+source: registry metadata endpoints (registry.npmjs.org, pypi.org, rubygems.org, api.nuget.org, packagist.org, crates.io) ; github.com/BinSentry
+ownership_rule: 'official: true only when the registry metadata (homepage, repository, author, URLs) names the provider''s domain (binsentry.com,
+  security/binsentry-domain-security.yml) or its accepted GitHub org (BinSentry).'
+packages:
+- name: fluent-siren-client
+  registry: github
+  url: https://github.com/BinSentry/fluent-siren-client
+  language: JavaScript
+  official: true
+  version: null
+  published: '2024-07-19'
+  source_repo: https://github.com/BinSentry/fluent-siren-client
+  evidence: repository in github.com/BinSentry, whose profile names the provider's domain
+- name: binsentry
+  registry: pypi
+  url: https://pypi.org/project/binsentry/
+  language: Python
+  official: false
+  version: 1.0.1
+  published: '2026-09-26'
+  evidence: 'name match only: the metadata names neither the provider''s domain nor its GitHub org'
+- name: npm-audit-gate
+  registry: npm
+  url: https://www.npmjs.com/package/npm-audit-gate
+  language: JavaScript
+  official: true
+  version: 1.0.0
+  published: '2026-09-02'
+  evidence: repository in github.com/BinSentry, publisher email binsentry.com domain
+- name: joi-siren
+  registry: npm
+  url: https://www.npmjs.com/package/joi-siren
+  language: JavaScript
+  official: true
+  version: 1.1.0
+  published: '2018-08-26'
+  evidence: repository in github.com/BinSentry, publisher email binsentry.com domain
